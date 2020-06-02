@@ -6,7 +6,7 @@ import kotlinx.android.synthetic.main.activity_second.*
 
 class SecondActivity : AppCompatActivity() {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
+   override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_second)
 
@@ -23,10 +23,14 @@ class SecondActivity : AppCompatActivity() {
 
         println("Place Name:${place1.placeName} and City :${place1.cityName}")
         txtPlace1.text = "Place Name:${place1.placeName} and City :${place1.cityName}"
+        txtPlaceName.text=place1.placeName
+        txtPlaceCity.text=place1.cityName
 
         val place2 = place1.copy(placeName = "Goldan Temple", cityName = "Amritsar")
         println("Place Name:${place2.placeName} and City :${place2.cityName}")
         txtPlace2.text = "Place Name:${place2.placeName} and City :${place2.cityName}"
+        txtPlaceNameOther.text=place2.placeName
+        txtPlaceCityOther.text=place2.cityName
 
     }
 }
